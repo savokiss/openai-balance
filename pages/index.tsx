@@ -103,14 +103,14 @@ export default function Page() {
         )}
         {error && <div className="text-red-500 text-center">{error}</div>}
         <footer className="py-20 text-center text-zinc-500 text-sm">
-          &copy; 2022{' '}
+          &copy; 2023{' '}
           <a
             href="https://github.com/savokiss"
             target="_blank"
             rel="nofollow noopenner"
             className=" text-blue-600 hover:underline"
           >
-            Savokiss
+            savokiss
           </a>
         </footer>
 
