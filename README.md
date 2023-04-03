@@ -1,6 +1,8 @@
 # OpenAI Balance
 
-Fetch your openai key's balance.
+Fetch your OpenAI key's balance.
+
+see: <https://openai-balance.vercel.app>
 
 ## License
 
