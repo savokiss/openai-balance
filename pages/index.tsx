@@ -4,7 +4,7 @@ import GithubCorner from 'react-github-corner';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import dayjs from 'dayjs';
-import { formatBalance, requestOpenaiClient } from './utils';
+import { formatBalance, requestOpenaiClient } from '../utils';
 
 export default function Page() {
   const router = useRouter();
