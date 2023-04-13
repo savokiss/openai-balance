@@ -22,7 +22,7 @@ export default function Page() {
 
     const startDate =
       data?.startDate || dayjs().subtract(2, 'month').format('YYYY-MM-DD');
-    const endDate = data?.endDate || dayjs().format('YYYY-MM-DD');
+    const endDate = data?.endDate || dayjs().add(1, 'day').format('YYYY-MM-DD');
     router.push({ query: { ...router.query, startDate, endDate } });
     const path = `/dashboard/billing/usage?${new URLSearchParams({
       start_date: startDate,
