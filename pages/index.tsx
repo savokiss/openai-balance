@@ -4,9 +4,9 @@ import GithubCorner from 'react-github-corner';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import dayjs from 'dayjs';
-import { ArrowPathIcon } from '@heroicons/react/24/outline';
+import { ArrowPathIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { PencilSquareIcon } from '@heroicons/react/20/solid';
-import { formatBalance, balanceText, getOpenaiUsage } from '../utils';
+import { formatBalance, getOpenaiUsage } from '../utils';
 import { storageUtils } from '../utils/storage';
 import { useRows } from '../hooks/useRows';
 
@@ -15,8 +15,6 @@ interface TableRow {
   key: string;
   usage: string;
 }
-
-function updateRowUsage() {}
 
 export default function Page() {
   const router = useRouter();
@@ -87,6 +85,10 @@ export default function Page() {
     });
     updateOrAddRow(row.key, totalUsage);
   };
+
+  const onDelete = async (row: TableRow) => {
+    setRows(rows.filter((r) => r.key !== row.key));
+  }
 
   const onEditName = (index: number) => {
     const name = prompt('Enter your Name', rows[index].name) || 'Key';
@@ -189,6 +191,13 @@ export default function Page() {
                       className="px-2 py-1 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
                     >
                       <ArrowPathIcon className="w-5 h-5 inline-block" />
+                    </button>
+
+                    <button
+                      onClick={() => onDelete(row)}
+                      className="ml-2 px-2 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+                    >
+                      <TrashIcon className="w-5 h-5 inline-block" />
                     </button>
                   </td>
                 </tr>
