@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/react': ^2.0.17
   '@types/node': ^18.11.12
   '@types/react': ^18.0.26
   '@vercel/analytics': ^0.1.6
@@ -18,6 +19,7 @@ specifiers:
   typescript: ^4.9.4
 
 dependencies:
+  '@heroicons/react': 2.0.17_react@18.2.0
   '@vercel/analytics': 0.1.6_react@18.2.0
   clsx: 1.2.1
   dayjs: 1.11.7
@@ -37,6 +39,14 @@ devDependencies:
   typescript: 4.9.4
 
 packages:
+
+  /@heroicons/react/2.0.17_react@18.2.0:
+    resolution: {integrity: sha512-90GMZktkA53YbNzHp6asVEDevUQCMtxWH+2UK2S8OpnLEu7qckTJPhNxNQG52xIR1WFTwFqtH6bt7a60ZNcLLA==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@next/env/13.0.6:
     resolution: {integrity: sha512-yceT6DCHKqPRS1cAm8DHvDvK74DLIkDQdm5iV+GnIts8h0QbdHvkUIkdOvQoOODgpr6018skbmSQp12z5OWIQQ==}
