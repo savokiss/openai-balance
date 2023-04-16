@@ -2,7 +2,12 @@
 
 Fetch your OpenAI key's balance.
 
-see: <https://openai-balance.vercel.app>
+see: <https://openai-balance.detools.dev>
+
+## Features
+- Default query for two months usage
+- History records are only saved in your browser
+- Conveniently manage multiple keys by remark.
 
 ## Related Repos
 
