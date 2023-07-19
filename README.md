@@ -1,4 +1,6 @@
-# OpenAI Balance
+# OpenAI Balance [DEPRECATED]
+
+> We've moved to a new nuxt project here: <https://github.com/savokiss/openai-keytools>
 
 Fetch your OpenAI key's balance.
 
